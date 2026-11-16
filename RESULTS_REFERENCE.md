@@ -3,7 +3,7 @@
 **Main goal:** Measure PyTorch GEMM and Conv2d microkernel time, TFLOPS, and bandwidth  
 **Tools:** Run the PyTorch microkernel suite through scripts/gemm.py and scripts/conv2d.py
 
-Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_142 · recorded 2026-11-16). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
+Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_143 · recorded 2026-11-16). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
 
 > Smoke runs use deliberately small sizes. They check that the workload installs and runs end to end; their numbers are not performance results. Baseline and extended are.
 
@@ -11,17 +11,17 @@ Reference results measured by the maintainer on the system shown in each section
 ## smoke
 
 - **System:** 1× AMD Instinct MI300X VF (196288 MB) · INTEL(R) XEON(R) PLATINUM 8568Y+ · Ubuntu 24.04.5 LTS · kernel 6.8.0-147-generic · driver 7.1.9.31600000
-- **Run:** 2026-11-16T11:24:32Z · status **PASS** (exit 0)
-- **Time (mm:ss):** setup 00:57 · benchmark 00:10 · whole run 01:20
-- **Source:** run 119_20261116_112432
+- **Run:** 2026-11-16T19:54:42Z · status **PASS** (exit 0)
+- **Time (mm:ss):** setup 01:09 · benchmark 00:12 · whole run 01:38
+- **Source:** run 119_20261116_195442
 - **Command:** `bash run_benchmark.sh --smoke --device-id 0 --dtype fp16 --input-shape 1,3,32,32 --M 64 --N 64 --K 64 --warmup-iters 2 --num-iterations 5 --seed 42`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | GEMM execution time, us (gemm_time_usec) | 27.5806 |
-| 2 | GEMM throughput, TFLOPS (gemm_tflops) | 0.019009 |
-| 3 | GEMM minimum traffic, GB/s (gemm_bandwidth_gb_s) | 0.891061 |
-| 4 | Conv2d execution time, us (conv_time_usec) | 46.1194 |
-| 5 | Conv2d throughput, TFLOPS (conv_tflops) | 0.009592 |
-| 6 | Conv2d minimum traffic, GB/s (conv_bandwidth_gb_s) | 0.497838 |
+| 1 | GEMM execution time, us (gemm_time_usec) | 28.6524 |
+| 2 | GEMM throughput, TFLOPS (gemm_tflops) | 0.018298 |
+| 3 | GEMM minimum traffic, GB/s (gemm_bandwidth_gb_s) | 0.857729 |
+| 4 | Conv2d execution time, us (conv_time_usec) | 44.3084 |
+| 5 | Conv2d throughput, TFLOPS (conv_tflops) | 0.009984 |
+| 6 | Conv2d minimum traffic, GB/s (conv_bandwidth_gb_s) | 0.518186 |
 <!-- /profile:smoke -->
