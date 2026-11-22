@@ -11,17 +11,17 @@ Reference results from the validation run on the system shown in each section (r
 ## smoke
 
 - **System:** 1× AMD Instinct MI300X VF (196288 MB) · INTEL(R) XEON(R) PLATINUM 8568Y+ · Ubuntu 24.04.5 LTS · kernel 6.8.0-149-generic · driver 7.1.9.31600000
-- **Run:** 2026-11-22T11:12:00Z · status **PASS** (exit 0)
+- **Run:** 2026-11-22T14:42:21Z · status **PASS** (exit 0)
 - **Time (mm:ss):** setup 00:56 · benchmark 00:09 · whole run 01:18
-- **Source:** run 119_20261122_111200
+- **Source:** run 119_20261122_144221
 - **Command:** `bash run_benchmark.sh --smoke --device-id 0 --dtype fp16 --input-shape 1,3,32,32 --M 64 --N 64 --K 64 --warmup-iters 2 --num-iterations 5 --seed 42`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | GEMM execution time, us (gemm_time_usec) | 25.4948 |
-| 2 | GEMM throughput, TFLOPS (gemm_tflops) | 0.020565 |
-| 3 | GEMM minimum traffic, GB/s (gemm_bandwidth_gb_s) | 0.963961 |
-| 4 | Conv2d execution time, us (conv_time_usec) | 39.1634 |
-| 5 | Conv2d throughput, TFLOPS (conv_tflops) | 0.011295 |
-| 6 | Conv2d minimum traffic, GB/s (conv_bandwidth_gb_s) | 0.586262 |
+| 1 | GEMM execution time, us (gemm_time_usec) | 27.2338 |
+| 2 | GEMM throughput, TFLOPS (gemm_tflops) | 0.019251 |
+| 3 | GEMM minimum traffic, GB/s (gemm_bandwidth_gb_s) | 0.902408 |
+| 4 | Conv2d execution time, us (conv_time_usec) | 41.8528 |
+| 5 | Conv2d throughput, TFLOPS (conv_tflops) | 0.01057 |
+| 6 | Conv2d minimum traffic, GB/s (conv_bandwidth_gb_s) | 0.548589 |
 <!-- /profile:smoke -->
